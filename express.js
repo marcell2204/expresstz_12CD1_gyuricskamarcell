@@ -1,13 +1,8 @@
 const express = require('express');
 const app = express();
-const bodyparser = require("body-parser");
 const cors = require("cors");
 const mysql = require("mysql");
-
-
-
 app.use(cors());
-app.use(bodyparser.json());
 
 const db = mysql.createConnection({
         host: "localhost",
@@ -15,7 +10,6 @@ const db = mysql.createConnection({
         port:3307,
         password:"",
         database:"fogado"
-
 })
 
 
